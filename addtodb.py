@@ -1,13 +1,17 @@
 import wx
 
+import wxpmain
+
+
+
 
 class DbManager:
+    # import csv to db
     def addSalestoDb(self, path):
 
         import sqlite3
         import csv
         connection = sqlite3.connect("gamesales.db")
-        cursor = connection.cursor()
         wx.BeginBusyCursor()
         with open(path) as csvdata:
             reader = csv.reader(csvdata, delimiter=",")
@@ -82,3 +86,7 @@ class DbManager:
 
             connection.close()
             wx.EndBusyCursor()
+            # restart GUI to get all checkboxes
+            wx.GetApp().GetTopWindow().Close()
+            wxpmain.MyFrame()
+
