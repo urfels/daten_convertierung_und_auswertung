@@ -1,3 +1,5 @@
+
+
 1. Starten Sie die main.ex -->  Programm starten
 2. Die Datenbank ist bereits gefüllt. Sie können die Inhalte Löschen und selber befüllen.
 2.a) Der Import kann einige Minuten Dauern (größte Datei 7Minuten bei 8GB Ram oder 3 Minuten bei 32 GB RAM )
